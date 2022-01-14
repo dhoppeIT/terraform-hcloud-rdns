@@ -1,19 +1,22 @@
-# FIXME
+# terraform-hcloud-rdns
 
-Terraform module to manage the FIXME resource.
+Terraform module to manage the Hetzner Cloud resource (hcloud_rdns).
 
 ## Graph
 
-![Graph](https://github.com/dhoppeIT/FIXME/blob/main/rover.png)
+![Graph](https://github.com/dhoppeIT/terraform-hcloud-rdns/blob/main/rover.png)
 
 ## Usage
 
 Copy and paste into your Terraform configuration, insert the variables and run ```terraform init```:
 
 ```hcl
-module "FIXME" {
-  source = "dhoppeIT/FIXME/tfe"
-  ...
+module "hcloud-rdns" {
+  source = "dhoppeIT/rdns/hcloud"
+
+  server_id  = 17273771
+  ip_address = "10.0.0.2"
+  dns_ptr    = "debian.dhoppe.it"
 }
 ```
 
@@ -26,4 +29,4 @@ Created and maintained by [Dennis Hoppe](https://github.com/dhoppeIT/).
 
 ## License
 
-Apache 2 licensed. See [LICENSE](https://github.com/dhoppeIT/FIXME/blob/main/LICENSE) for full details.
+Apache 2 licensed. See [LICENSE](https://github.com/dhoppeIT/terraform-hcloud-rdns/blob/main/LICENSE) for full details.
