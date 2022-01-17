@@ -4,6 +4,6 @@ output "dns_ptr" {
 }
 
 output "ip_address" {
-  description = " IP address"
+  description = "IP address"
   value       = hcloud_rdns.default.ip_address
 }
