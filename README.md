@@ -13,12 +13,16 @@ Copy and paste into your Terraform configuration, insert the variables and run `
 **Create one reverse DNS entry:**
 
 ```hcl
+data "hcloud_server" "default" {
+  name = "debian"
+}
+
 module "hcloud-rdns" {
   source = "dhoppeIT/rdns/hcloud"
 
-  server_id  = 17273771
-  ip_address = "10.0.0.2"
-  dns_ptr    = "debian.dhoppe.it"
+  server_id  = data.hcloud_server.default.id
+  ip_address = data.hcloud_server.default.ipv4_address
+  dns_ptr    = "${data.hcloud_server.default.name}.dhoppe.it"
 }
 ```
 
