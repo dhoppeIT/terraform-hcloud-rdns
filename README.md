@@ -17,7 +17,7 @@ data "hcloud_server" "default" {
   name = "debian"
 }
 
-module "hcloud-rdns" {
+module "hcloud_rdns" {
   source = "dhoppeIT/rdns/hcloud"
 
   server_id  = data.hcloud_server.default.id
@@ -31,7 +31,7 @@ module "hcloud-rdns" {
 ```hcl
 data "hcloud_servers" "default" {}
 
-module "hcloud-rdns" {
+module "hcloud_rdns" {
   source = "dhoppeIT/rdns/hcloud"
 
   count = length(data.hcloud_servers.default.servers)
