@@ -85,6 +85,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_dns_ptr"></a> [dns\_ptr](#output\_dns\_ptr) | DNS pointer for the IP address |
+| <a name="output_id"></a> [id](#output\_id) | Unique ID of the Reverse DNS entry |
 | <a name="output_ip_address"></a> [ip\_address](#output\_ip\_address) | IP address |
 
 <!--- END_TF_DOCS --->
