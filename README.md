@@ -1,6 +1,8 @@
 # terraform-hcloud-rdns
 
-Terraform module to manage the Hetzner Cloud resource (hcloud_rdns).
+Terraform module to manage the following Hetzner Cloud resource:
+
+* hcloud_rdns
 
 ## Graph
 
@@ -18,7 +20,8 @@ data "hcloud_server" "default" {
 }
 
 module "hcloud_rdns" {
-  source = "dhoppeIT/rdns/hcloud"
+  source  = "dhoppeIT/rdns/hcloud"
+  version = "~> 0.1"
 
   server_id  = data.hcloud_server.default.id
   ip_address = data.hcloud_server.default.ipv4_address
@@ -29,10 +32,11 @@ module "hcloud_rdns" {
 **Create multiple reverse DNS entries:**
 
 ```hcl
-data "hcloud_servers" "default" {}
+
 
 module "hcloud_rdns" {
-  source = "dhoppeIT/rdns/hcloud"
+  source  = "dhoppeIT/rdns/hcloud"
+  version = "~> 0.1"
 
   count = length(data.hcloud_servers.default.servers)
 
