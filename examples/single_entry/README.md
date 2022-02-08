@@ -56,6 +56,7 @@ $ terraform apply
 | Name | Description |
 |------|-------------|
 | <a name="output_rdns_dns_ptr"></a> [rdns\_dns\_ptr](#output\_rdns\_dns\_ptr) | DNS pointer for the IP address |
+| <a name="output_rdns_id"></a> [rdns\_id](#output\_rdns\_id) | Unique ID of the Reverse DNS entry |
 | <a name="output_rdns_ip_address"></a> [rdns\_ip\_address](#output\_rdns\_ip\_address) | IP address |
 
 <!--- END_TF_DOCS --->
