@@ -12,8 +12,6 @@ Terraform module to manage the following Hetzner Cloud resource:
 
 Copy and paste into your Terraform configuration, insert the variables and run ```terraform init```:
 
-**Create one reverse DNS entry:**
-
 ```hcl
 data "hcloud_server" "default" {
   name = "debian"
@@ -26,23 +24,6 @@ module "hcloud_rdns" {
   server_id  = data.hcloud_server.default.id
   ip_address = data.hcloud_server.default.ipv4_address
   dns_ptr    = "${data.hcloud_server.default.name}.dhoppe.it"
-}
-```
-
-**Create multiple reverse DNS entries:**
-
-```hcl
-
-
-module "hcloud_rdns" {
-  source  = "dhoppeIT/rdns/hcloud"
-  version = "~> 0.1"
-
-  count = length(data.hcloud_servers.default.servers)
-
-  server_id  = data.hcloud_servers.default.servers[count.index].id
-  ip_address = data.hcloud_servers.default.servers[count.index].ipv4_address
-  dns_ptr    = "${data.hcloud_servers.default.servers[count.index].name}.dhoppe.it"
 }
 ```
 
