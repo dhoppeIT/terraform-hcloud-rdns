@@ -39,7 +39,7 @@ module "hcloud_rdns" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_hcloud"></a> [hcloud](#provider\_hcloud) | 1.32.2 |
+| <a name="provider_hcloud"></a> [hcloud](#provider\_hcloud) | 1.33.0 |
 
 ## Modules
 
