@@ -1,0 +1,9 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## 1.0.0 (2025-10-14)
+
+### Features
+
+* **terraform:** Add support for resource hcloud_rdns ([c2252c2](https://gitlab.com/terraform-child-modules-48151/terraform-hcloud-rdns/commit/c2252c22c81a932418680df6b85f041433617816))
